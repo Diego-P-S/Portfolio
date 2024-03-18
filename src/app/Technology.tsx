@@ -9,14 +9,14 @@ const Technology = () => {
             bgColor="transparent"
             maxW="1500px"
             color="#FFF"
+            marginBottom={30}
             paddingX={{ base: "10px", md: "30px" }}
             w="full"
             h="full"
             marginX="auto">
             <Text
                 marginBottom="20px"
-                fontSize={{ base: "18px", lg: "28px" }}
-                fontFamily="oswald"
+                fontSize={{ base: 24, md: 32, lg: 48 }}
                 backgroundClip="text"
                 color="#ff6b31"
                 fontWeight="bold">
