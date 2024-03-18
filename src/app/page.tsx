@@ -70,7 +70,7 @@ export default function Home() {
                             <Image src="icons/wevoltgreen.svg" w="90px" h="90px" alt="wevolt" />
                         </Link>
 
-                        <Text textAlign="initial" as="a" color="#FFF">
+                        <Text textAlign="initial" as="a">
                             I collaborate with cross-functional teams to design and develop intuitive, responsive
                             interfaces for web and mobile applications.
                             <br />
