@@ -1,0 +1,33 @@
+{
+    "name": "diego",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint"
+    },
+    "dependencies": {
+        "@chakra-ui/next-js": "^2.1.4",
+        "@chakra-ui/react": "^2.7.1",
+        "@emotion/react": "^11.11.1",
+        "@emotion/styled": "^11.11.0",
+        "eslint-config-next": "13.4.9",
+        "framer-motion": "^10.18.0",
+        "next": "13.4.9",
+        "react": "18.2.0",
+        "react-dom": "18.2.0",
+        "react-particles": "^2.11.0",
+        "react-typed": "^2.0.12",
+        "tsparticles-slim": "^2.11.0",
+        "typewriter-effect": "^2.21.0"
+    },
+    "devDependencies": {
+        "@types/node": "20.4.2",
+        "@types/react": "18.2.15",
+        "eslint": "^8.57.0",
+        "eslint-plugin-react": "^7.34.0",
+        "typescript": "^5.4.2"
+    }
+}
