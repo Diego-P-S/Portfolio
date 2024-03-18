@@ -1,25 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 "use client"
-import { useState, useCallback } from "react"
-import {
-    Button,
-    Flex,
-    Image,
-    Text,
-    Modal,
-    ModalContent,
-    ModalHeader,
-    FormControl,
-    ModalBody,
-    FormLabel,
-    ModalCloseButton,
-    useDisclosure,
-    Input,
-    Grid,
-    GridItem,
-    Textarea,
-    Link,
-} from "@chakra-ui/react"
+import { useCallback } from "react"
+import { Flex, Image, Text, useDisclosure, Grid, GridItem, Link } from "@chakra-ui/react"
 import Particles from "react-particles"
 import { loadSlim } from "tsparticles-slim"
 
@@ -29,23 +11,10 @@ import React from "react"
 import Header from "./Header"
 import { motion } from "framer-motion"
 import About from "./About"
+import TalkModal from "./talkModal"
 
 export default function Home() {
     const { isOpen, onOpen, onClose } = useDisclosure()
-
-    const [name, setName] = useState("")
-    const [email, setEmail] = useState("")
-    const [message, setMessage] = useState("")
-
-    function sendEmail(e) {
-        e.preventDefault()
-        if (name === "" || email === "" || message === "") {
-            alert("Fill in all the fields!")
-        } else {
-            window.open(`mailto:diegosantosmtd@gmail.com?subject=${name} - ${email}&body=${message}`, "_blank")
-            onClose()
-        }
-    }
 
     const particlesInit = useCallback(async (engine) => {
         await loadSlim(engine)
@@ -59,13 +28,21 @@ export default function Home() {
         <Flex flexDir="column">
             <Header onOpen={onOpen} />
 
-            <Flex minH="100vh" marginX="auto" maxW="1000px" id="About" alignItems="center" justifyItems={"center"}>
+            <Flex
+                marginTop={{ base: 170, lg: 0 }}
+                minH="100vh"
+                marginX="auto"
+                maxW="1000px"
+                id="About"
+                alignItems="center"
+                justifyItems={"center"}
+                flexDir={{ base: "column", lg: "row" }}>
                 <motion.animate initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 5 }}>
                     <Image
                         src="icons/Profile/MeWithBorder.jpeg"
                         borderRadius="full"
-                        height="full"
-                        width="ful"
+                        height={{ base: "300px", lg: "full" }}
+                        width={{ base: "300px", lg: "full" }}
                         alt="AboutMe"
                     />
                 </motion.animate>
@@ -73,8 +50,11 @@ export default function Home() {
                 <About />
             </Flex>
 
-            <Flex marginX="auto" maxW="1500px" id="Experiences" minH="100vh" padding="30px" marginTop={40}>
-                <Grid templateColumns="repeat(3, 1fr)" gap={6}>
+            <Flex marginX="auto" maxW="1500px" id="Experiences" minH="100vh" padding="30px">
+                <Grid
+                    templateColumns={{ base: "repeat(1, 3fr)", lg: "repeat(3, 1fr)" }}
+                    gap={6}
+                    flexDir={{ base: "column", lg: "row" }}>
                     <GridItem w="100%" h="100%">
                         <Text
                             backgroundClip="text"
@@ -93,12 +73,17 @@ export default function Home() {
                         <Text textAlign="initial" as="a" color="#FFF">
                             I collaborate with cross-functional teams to design and develop intuitive, responsive
                             interfaces for web and mobile applications.
+                            <br />
                             <br /> My responsibilities include implementing new features, conducting thorough code
                             reviews, integrating external APIs, and actively participating in agile development sprints
                             to ensure projects are delivered on time. <br />
+                            <br />
                             Additionally, I utilize Storybook to meticulously craft and manage a comprehensive library
                             of UI components, fostering consistency and efficiency throughout the development lifecycle.
                         </Text>
+                    </GridItem>
+                    <GridItem w="100%" h="100%">
+                        <Image src="icons/Wevolt-EV-Charging-Solutions.jpg" w="auto" h="auto" alt="wevolt" />
                     </GridItem>
                 </Grid>
             </Flex>
@@ -107,50 +92,7 @@ export default function Home() {
 
             <Footer />
 
-            <Modal isOpen={isOpen} onClose={onClose}>
-                <ModalContent color="black">
-                    <ModalHeader>
-                        <Flex flexDir="column">
-                            <Flex align="center">
-                                <Image src="/dahmotta.svg" alt="logo" width="50px" marginRight="10px" />
-                                <Text>LET'S TALK?</Text>
-                            </Flex>
-                            <Text fontSize="16px" marginTop="20px" textAlign="center">
-                                Send me a message and I will reply to you ASAP
-                            </Text>
-                        </Flex>
-                    </ModalHeader>
-                    <ModalCloseButton />
-                    <ModalBody>
-                        <FormControl>
-                            <FormLabel>Name</FormLabel>
-                            <Input type="text" onChange={(e) => setName(e.target.value)} value={name} />
-
-                            <FormLabel marginTop="10px">E-mail</FormLabel>
-                            <Input type="text" onChange={(e) => setEmail(e.target.value)} value={email} />
-
-                            <FormLabel marginTop="10px">Mensagem</FormLabel>
-                            <Textarea
-                                placeholder="Digite aqui..."
-                                onChange={(e) => setMessage(e.target.value)}
-                                value={message}
-                            />
-                        </FormControl>
-                        <Flex marginTop="20px">
-                            <Button colorScheme="gray" mr={3} onClick={onClose}>
-                                Fechar
-                            </Button>
-                            <Button
-                                // href={`mailto:diegosantosmtd@gmail.com?subject=${name} - ${email}&body=${mensagem}`}
-                                variant="ghost"
-                                color="green"
-                                onClick={sendEmail}>
-                                Enviar
-                            </Button>
-                        </Flex>
-                    </ModalBody>
-                </ModalContent>
-            </Modal>
+            <TalkModal isOpen={isOpen} onClose={onClose} />
 
             <Flex opacity={0.2} zIndex={-1}>
                 <Particles

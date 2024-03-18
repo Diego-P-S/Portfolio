@@ -1,7 +1,7 @@
 .Typewriter {
     overflow: hidden;
-
-    font-size: 20px;
+    margin-top: 20px;
+    font-size: 16px;
 }
 
 .Typewriter__cursor {

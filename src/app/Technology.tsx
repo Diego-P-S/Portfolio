@@ -9,7 +9,6 @@ const Technology = () => {
             bgColor="transparent"
             maxW="1500px"
             color="#FFF"
-            paddingY="30px"
             paddingX={{ base: "10px", md: "30px" }}
             w="full"
             h="full"
