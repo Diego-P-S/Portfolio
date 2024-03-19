@@ -62,21 +62,16 @@ export default function Home() {
                 id="Experiences"
                 padding="30px"
                 wrap={"wrap"}>
-                <Flex
-                    alignItems={"center"}
-                    justifyItems={"center"}
-                    justifyContent="center"
-                    gap={6}
-                    flexDir={{ base: "column", lg: "row" }}>
-                    <Flex w="100%" h="100%" flexDir={"column"}>
+                <Flex justifyItems={"center"} gap={2} flexDir={{ base: "column", lg: "row" }}>
+                    <Flex w="100%" h="100%" flexDir={"column"} wrap={"wrap"}>
                         <Flex flexDir={"column"}>
                             <Text
                                 backgroundClip="text"
                                 color="#ff6b31 "
                                 as={"a"}
-                                fontSize={{ base: 24, md: 32, lg: 48 }}
+                                fontSize={{ base: 24, md: 32, lg: 40 }}
                                 fontWeight="bold"
-                                marginBottom="20px">
+                                marginBottom="10px">
                                 Experience
                             </Text>
 
@@ -84,25 +79,29 @@ export default function Home() {
                                 <Image src="icons/wevoltgreen.svg" w="90px" h="90px" alt="wevolt" />
                             </Link>
                         </Flex>
-
-                        <Text textAlign="initial" as="a" fontSize={{ base: 12, md: 16, lg: 24 }}>
-                            I collaborate with cross-functional teams to design and develop intuitive, responsive
-                            interfaces for web and mobile applications.
-                            <br /> My responsibilities include implementing new features, conducting thorough code
-                            reviews, integrating external APIs, and actively participating in agile development sprints
-                            to ensure projects are delivered on time.
-                            <br />
-                            Additionally, I utilize Storybook to meticulously craft and manage a comprehensive library
-                            of UI components, fostering consistency and efficiency throughout the development lifecycle.
-                        </Text>
+                        <Flex>
+                            <Text textAlign="initial" fontSize={{ base: 12, md: 16, lg: 24 }}>
+                                I collaborate with cross-functional teams to design and develop intuitive, responsive
+                                interfaces for web and mobile applications.
+                                <br /> My responsibilities include implementing new features, conducting thorough code
+                                reviews, integrating external APIs, and actively participating in agile development
+                                sprints to ensure projects are delivered on time.
+                                <br />
+                                Additionally, I utilize Storybook to meticulously craft and manage a comprehensive
+                                library of UI components, fostering consistency and efficiency throughout the
+                                development lifecycle.
+                            </Text>
+                        </Flex>
                     </Flex>
-                    <Container>
+                    <Container w="100%" h="100%">
                         <Carousel />
                     </Container>
                 </Flex>
             </Container>
 
             <Technology />
+
+            {/* <Testimonials /> */}
 
             <Footer />
 

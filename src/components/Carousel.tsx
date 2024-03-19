@@ -25,7 +25,12 @@ interface CardProps {
 const Card = ({ image1 }: CardProps) => {
     return (
         <Flex flexDir={"column"}>
-            <Image src={image1} alt="image1" />
+            <Image
+                src={image1}
+                alt="image1"
+                width={{ base: "30%", md: "50%", lg: "100%" }}
+                height={{ base: "30%", md: "50%", lg: "100%" }}
+            />
         </Flex>
     )
 }
@@ -43,7 +48,7 @@ export default function Carousel() {
     ]
 
     return (
-        <Box position={"relative"} height={"auto"} width={"full"} overflow={"hidden"}>
+        <Box height={"100%"} width={"full"}>
             {/* CSS files for react-slick */}
             <link
                 rel="stylesheet"

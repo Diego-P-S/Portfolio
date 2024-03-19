@@ -14,10 +14,11 @@ const Technology = () => {
             paddingX={{ base: "10px", md: "30px" }}
             w="full"
             h="full"
+            minH="100vh"
             marginX="auto">
             <Text
                 marginBottom="20px"
-                fontSize={{ base: 24, md: 32, lg: 48 }}
+                fontSize={{ base: 24, md: 32, lg: 40 }}
                 backgroundClip="text"
                 color="#ff6b31"
                 fontWeight="bold">
@@ -26,7 +27,8 @@ const Technology = () => {
 
             <Flex flexDir={"column"}>
                 <Text textAlign="initial" as="a" fontSize={{ base: 12, md: 16, lg: 24 }} marginBottom={10}>
-                    Here are a few technologies I've been working with recently.
+                    Below, I've outlined some of the cutting-edge technologies I'm proficient in as a front-end
+                    developer.
                 </Text>
                 <Flex justifyContent="space-between" overflow="hidden" gap={{ base: "2", lg: "5" }} overflowX="auto">
                     <Box minW="90px" minH="100px">
