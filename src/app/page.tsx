@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 "use client"
 import { useCallback } from "react"
-import { Flex, Image, Text, useDisclosure, Grid, GridItem, Link } from "@chakra-ui/react"
+import { Flex, Image, Text, useDisclosure, Link } from "@chakra-ui/react"
 import Particles from "react-particles"
 import { loadSlim } from "tsparticles-slim"
 
@@ -12,6 +12,8 @@ import Header from "./Header"
 import { motion } from "framer-motion"
 import About from "./About"
 import TalkModal from "./talkModal"
+import Container from "../components/Container"
+import Carousel from "../components/Carousel"
 
 export default function Home() {
     const { isOpen, onOpen, onClose } = useDisclosure()
@@ -50,25 +52,38 @@ export default function Home() {
                 <About />
             </Flex>
 
-            <Flex marginX="auto" maxW="1500px" id="Experiences" minH="100vh" padding="30px">
-                <Grid
-                    templateColumns={{ base: "repeat(1, 3fr)", lg: "repeat(3, 1fr)" }}
+            <Container
+                height={"auto"}
+                backgroundColor="rgba(49,49,51,0.7)"
+                opacity={0.8}
+                borderRadius="30px"
+                marginX="auto"
+                maxW="1500px"
+                id="Experiences"
+                padding="30px"
+                wrap={"wrap"}>
+                <Flex
+                    alignItems={"center"}
+                    justifyItems={"center"}
+                    justifyContent="center"
                     gap={6}
                     flexDir={{ base: "column", lg: "row" }}>
-                    <GridItem w="100%" h="100%">
-                        <Text
-                            backgroundClip="text"
-                            color="#ff6b31 "
-                            as={"a"}
-                            fontSize={{ base: 24, md: 32, lg: 48 }}
-                            fontWeight="bold"
-                            marginBottom="20px">
-                            Experience
-                        </Text>
+                    <Flex w="100%" h="100%" flexDir={"column"}>
+                        <Flex flexDir={"column"}>
+                            <Text
+                                backgroundClip="text"
+                                color="#ff6b31 "
+                                as={"a"}
+                                fontSize={{ base: 24, md: 32, lg: 48 }}
+                                fontWeight="bold"
+                                marginBottom="20px">
+                                Experience
+                            </Text>
 
-                        <Link href="https://www.wevolt.com.au">
-                            <Image src="icons/wevoltgreen.svg" w="90px" h="90px" alt="wevolt" />
-                        </Link>
+                            <Link href="https://www.wevolt.com.au">
+                                <Image src="icons/wevoltgreen.svg" w="90px" h="90px" alt="wevolt" />
+                            </Link>
+                        </Flex>
 
                         <Text textAlign="initial" as="a" fontSize={{ base: 12, md: 16, lg: 24 }}>
                             I collaborate with cross-functional teams to design and develop intuitive, responsive
@@ -80,12 +95,12 @@ export default function Home() {
                             Additionally, I utilize Storybook to meticulously craft and manage a comprehensive library
                             of UI components, fostering consistency and efficiency throughout the development lifecycle.
                         </Text>
-                    </GridItem>
-                    <GridItem w="100%" h="100%">
-                        <Image src="icons/Wevolt-EV-Charging-Solutions.jpg" w="auto" h="auto" alt="wevolt" />
-                    </GridItem>
-                </Grid>
-            </Flex>
+                    </Flex>
+                    <Container>
+                        <Carousel />
+                    </Container>
+                </Flex>
+            </Container>
 
             <Technology />
 

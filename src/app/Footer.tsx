@@ -42,7 +42,7 @@ export default function SmallWithLogoLeft() {
                 <Image src={"/icons/DiegoLogo.svg"} width={100} height={100} alt={"DiegoLogo"} />
 
                 <Text fontSize={20} fontWeight={500}>
-                    DiegoSantosmtd@gmail.com
+                    diegosantosmtd@gmail.com
                 </Text>
                 <Stack direction={"row"} spacing={6}>
                     <SocialButton

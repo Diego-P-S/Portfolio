@@ -38,13 +38,13 @@ const Header = ({ onOpen }: Props) => {
                         />
                     </Flex>
                 </Flex>
-                <Flex marginTop={{ base: "14px", lg: "0px" }}>
+                <Flex marginTop={{ base: "14px", lg: "0px" }} wrap="wrap">
                     <Button
                         _hover={{ color: "#ff6b31" }}
                         as={"a"}
                         height="30px"
                         href="#Experiences"
-                        fontSize="20px"
+                        fontSize={{ base: "14px", lg: "20px" }}
                         variant="unstyled">
                         Experiences
                     </Button>
@@ -53,7 +53,7 @@ const Header = ({ onOpen }: Props) => {
                         height="30px"
                         as={"a"}
                         href="#Technologies"
-                        fontSize="20px"
+                        fontSize={{ base: "14px", lg: "20px" }}
                         variant="unstyled"
                         marginX={{ base: "20px", lg: "20px" }}>
                         Technologies
@@ -62,7 +62,7 @@ const Header = ({ onOpen }: Props) => {
                         _hover={{ color: "#ff6b31" }}
                         as={"a"}
                         height="30px"
-                        fontSize="20px"
+                        fontSize={{ base: "14px", lg: "20px" }}
                         variant="unstyled"
                         onClick={onOpen}>
                         Lets talk?
