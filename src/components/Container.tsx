@@ -7,7 +7,7 @@ interface Props extends FlexProps {
 
 const Container = ({ children, ...props }: Props) => {
     return (
-        <Flex mx="auto" my="auto" maxW={"1000px"} w="full" flexDir="column" bgColor="transparent" {...props}>
+        <Flex mx="auto" my="auto" maxW={"800px"} w="full" flexDir="column" bgColor="transparent" {...props}>
             {children}
         </Flex>
     )

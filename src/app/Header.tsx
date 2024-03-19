@@ -44,7 +44,7 @@ const Header = ({ onOpen }: Props) => {
                         as={"a"}
                         height="30px"
                         href="#Experiences"
-                        fontSize={{ base: "14px", lg: "20px" }}
+                        fontSize={{ base: "12px", lg: "20px" }}
                         variant="unstyled">
                         Experiences
                     </Button>
@@ -53,16 +53,16 @@ const Header = ({ onOpen }: Props) => {
                         height="30px"
                         as={"a"}
                         href="#Technologies"
-                        fontSize={{ base: "14px", lg: "20px" }}
+                        fontSize={{ base: "12px", lg: "20px" }}
                         variant="unstyled"
-                        marginX={{ base: "20px", lg: "20px" }}>
+                        marginX={{ base: "10px", lg: "20px" }}>
                         Technologies
                     </Button>
                     <Button
                         _hover={{ color: "#ff6b31" }}
                         as={"a"}
                         height="30px"
-                        fontSize={{ base: "14px", lg: "20px" }}
+                        fontSize={{ base: "12px", lg: "20px" }}
                         variant="unstyled"
                         onClick={onOpen}>
                         Lets talk?

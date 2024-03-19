@@ -60,10 +60,9 @@ export default function Home() {
                 marginX="auto"
                 maxW="1500px"
                 id="Experiences"
-                padding="30px"
-                wrap={"wrap"}>
-                <Flex justifyItems={"center"} gap={2} flexDir={{ base: "column", lg: "row" }}>
-                    <Flex w="100%" h="100%" flexDir={"column"} wrap={"wrap"}>
+                padding="20px">
+                <Flex justifyItems={"center"} gap={2} flexDir={{ base: "column", xl: "row" }}>
+                    <Flex h="100%" flexDir={"column"} wrap={"wrap"} marginRight={10}>
                         <Flex flexDir={"column"}>
                             <Text
                                 backgroundClip="text"

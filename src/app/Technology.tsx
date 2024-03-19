@@ -11,7 +11,7 @@ const Technology = () => {
             maxW="1500px"
             color="#FFF"
             my={50}
-            paddingX={{ base: "10px", md: "30px" }}
+            paddingX={{ base: "20px", md: "30px" }}
             w="full"
             h="full"
             minH="100vh"

@@ -28,8 +28,8 @@ const Card = ({ image1 }: CardProps) => {
             <Image
                 src={image1}
                 alt="image1"
-                width={{ base: "30%", md: "50%", lg: "100%" }}
-                height={{ base: "30%", md: "50%", lg: "100%" }}
+                width={{ base: "50", md: "70%", lg: "100%" }}
+                height={{ base: "50%", md: "70%", lg: "100%" }}
             />
         </Flex>
     )
@@ -68,8 +68,8 @@ export default function Carousel() {
                     bgColor="#ff6b31"
                     color="#fff"
                     borderRadius="full"
-                    h={"45px"}
-                    w={"45px"}
+                    h={{ base: "35px", md: "45px" }}
+                    w={{ base: "35px", md: "45px" }}
                     transform={"translate(0%, -50%)"}
                     zIndex={2}
                     onClick={() => slider?.slickPrev()}
@@ -82,8 +82,8 @@ export default function Carousel() {
                     aria-label="right-arrow"
                     bgColor="#ff6b31"
                     color="#fff"
-                    h={"45px"}
-                    w={"45px"}
+                    h={{ base: "35px", md: "45px" }}
+                    w={{ base: "35px", md: "45px" }}
                     borderRadius="full"
                     transform={"translate(0%, -50%)"}
                     zIndex={2}
