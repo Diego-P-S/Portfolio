@@ -14,6 +14,7 @@ import About from "./About"
 import TalkModal from "./talkModal"
 import Container from "../components/Container"
 import Carousel from "../components/Carousel"
+import Testimonials from "../components/Testimonials"
 
 export default function Home() {
     const { isOpen, onOpen, onClose } = useDisclosure()
@@ -100,7 +101,7 @@ export default function Home() {
 
             <Technology />
 
-            {/* <Testimonials /> */}
+            <Testimonials />
 
             <Footer />
 

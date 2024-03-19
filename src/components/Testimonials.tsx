@@ -1,7 +1,10 @@
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable no-undef */
 "use client"
 
-import { Box, Flex, Text, Stack, Container, Avatar, useColorModeValue } from "@chakra-ui/react"
+import { Box, Flex, Text, Stack, Container, Avatar, useColorModeValue, chakra, VisuallyHidden } from "@chakra-ui/react"
+import { FaLinkedin } from "react-icons/fa"
+import { ReactNode } from "react"
 
 interface Props {
     children: React.ReactNode
@@ -44,6 +47,29 @@ const TestimonialContent = (props: Props) => {
         </Stack>
     )
 }
+const SocialButton = ({ children, label, href }: { children: ReactNode; label: string; href: string }) => {
+    return (
+        <chakra.button
+            bg={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
+            rounded={"full"}
+            w={8}
+            h={8}
+            cursor={"pointer"}
+            as={"a"}
+            marginLeft={5}
+            href={href}
+            display={"inline-flex"}
+            alignItems={"center"}
+            justifyContent={"center"}
+            transition={"background 0.3s ease"}
+            _hover={{
+                bg: useColorModeValue("blackAlpha.200", "whiteAlpha.200"),
+            }}>
+            <VisuallyHidden>{label}</VisuallyHidden>
+            {children}
+        </chakra.button>
+    )
+}
 
 const TestimonialText = (props: Props) => {
     const { children } = props
@@ -59,15 +85,20 @@ const TestimonialText = (props: Props) => {
     )
 }
 
-const TestimonialAvatar = ({ src, name, title }: { src: string; name: string; title: string }) => {
+const TestimonialAvatar = ({ src, name, title, site }: { src: string; name: string; title: string; site?: string }) => {
     return (
         <Flex align={"center"} mt={8} direction={"column"}>
             <Avatar src={src} mb={2} />
-            <Stack spacing={-1} align={"center"}>
-                <Text fontWeight={600}>{name}</Text>
-                <Text fontSize={"sm"} color="#ff6b31">
-                    {title}
-                </Text>
+            <Stack spacing={-1} align={"center"} flexDir={"row"}>
+                <Flex flexDir={"column"} align={"center"}>
+                    <Text fontWeight={600}>{name}</Text>
+                    <Text fontSize={"sm"} color="#ff6b31">
+                        {title}
+                    </Text>
+                </Flex>
+                <SocialButton label={"LinkedIn"} href={site}>
+                    <FaLinkedin size={50} />
+                </SocialButton>
             </Stack>
         </Flex>
     )
@@ -86,46 +117,19 @@ export default function WithSpeechBubbles() {
                     <Testimonial>
                         <TestimonialContent>
                             <TestimonialText>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor neque sed imperdiet nibh
-                                lectus feugiat nunc sem.
+                                I've really enjoyed seeing Diego grow with us at WeVolt. From day one, he brought this
+                                amazing energy and dedication that's hard to find. What strikes me most is not just his
+                                skill in front-end development, but also how he faces every challenge with a smile and a
+                                'let's do this' attitude. More than that, Diego is incredibly humble and just a great
+                                person to be around. He makes our team better, not just with the work he does, but with
+                                the positivity he brings every day. Anyone would be lucky to have him on their team.
                             </TestimonialText>
                         </TestimonialContent>
                         <TestimonialAvatar
-                            src={
-                                "https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80"
-                            }
-                            name={"Jane Cooper"}
-                            title={"CEO at ABC Corporation"}
-                        />
-                    </Testimonial>
-                    <Testimonial>
-                        <TestimonialContent>
-                            <TestimonialText>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor neque sed imperdiet nibh
-                                lectus feugiat nunc sem.
-                            </TestimonialText>
-                        </TestimonialContent>
-                        <TestimonialAvatar
-                            src={
-                                "https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80"
-                            }
-                            name={"Jane Cooper"}
-                            title={"CEO at ABC Corporation"}
-                        />
-                    </Testimonial>
-                    <Testimonial>
-                        <TestimonialContent>
-                            <TestimonialText>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor neque sed imperdiet nibh
-                                lectus feugiat nunc sem.
-                            </TestimonialText>
-                        </TestimonialContent>
-                        <TestimonialAvatar
-                            src={
-                                "https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80"
-                            }
-                            name={"Jane Cooper"}
-                            title={"CEO at ABC Corporation"}
+                            src={"icons/Experiences/Madan.jpeg"}
+                            name={"Madan Morris"}
+                            title={"CTO at Wevolt"}
+                            site="https://www.linkedin.com/in/madan-morris-98615624/"
                         />
                     </Testimonial>
                 </Stack>
