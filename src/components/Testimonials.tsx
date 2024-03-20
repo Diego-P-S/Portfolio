@@ -88,7 +88,7 @@ const TestimonialText = (props: Props) => {
 const TestimonialAvatar = ({ src, name, title, site }: { src: string; name: string; title: string; site?: string }) => {
     return (
         <Flex align={"center"} mt={8} direction={"column"}>
-            <Avatar src={src} mb={2} />
+            <Avatar size={"lg"} src={src} mb={2} />
             <Stack spacing={-1} align={"center"} flexDir={"row"}>
                 <Flex flexDir={"column"} align={"center"}>
                     <Text fontWeight={600}>{name}</Text>
@@ -130,6 +130,42 @@ export default function WithSpeechBubbles() {
                             name={"Madan Morris"}
                             title={"CTO at Wevolt"}
                             site="https://www.linkedin.com/in/madan-morris-98615624/"
+                        />
+                    </Testimonial>
+                    <Testimonial>
+                        <TestimonialContent>
+                            <TestimonialText>
+                                I have had the please of working with Diego during my time at Wevolt. He possesses an
+                                exceptional ability to transform design concepts into seamless and visually stunning
+                                interfaces. With his proficiency in crafting web and mobile interfaces and delivering
+                                engaging user experiences, Diego is a valuable asset to any team.
+                            </TestimonialText>
+                        </TestimonialContent>
+                        <TestimonialAvatar
+                            src={
+                                "https://media.licdn.com/dms/image/C5603AQHVSEqs2JaSgA/profile-displayphoto-shrink_200_200/0/1651839864362?e=1716422400&v=beta&t=UeErXFom9n0oJu29GmC2IaqIkDXaCilZAWnYaTvK0eg"
+                            }
+                            name={"Janmay Patel"}
+                            title={"Fullstack at Wevolt"}
+                            site="https://www.linkedin.com/in/janmayp/"
+                        />
+                    </Testimonial>
+                    <Testimonial>
+                        <TestimonialContent>
+                            <TestimonialText>
+                                Diego is an outstanding junior front end developer with a strong focus on React and
+                                React Native. Throughout our year working together, his dedication, quick learning, and
+                                attention to detail stood out. Diego consistently delivered high-quality code and
+                                actively contributed to our team's success. As his mentor, I confidently recommend him
+                                for any front end development role; his professionalism and talent make him a valuable
+                                asset to any project.
+                            </TestimonialText>
+                        </TestimonialContent>
+                        <TestimonialAvatar
+                            src={"icons/Experiences/Henrique.jpg"}
+                            name={"Henrique Hermes"}
+                            title={"Front End Developer"}
+                            site="https://www.linkedin.com/in/henrique-hermes-59703a121/"
                         />
                     </Testimonial>
                 </Stack>
