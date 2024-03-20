@@ -1,8 +1,8 @@
 "use client"
 
-import { Box, chakra, Container, Flex, Stack, Text, useColorModeValue, VisuallyHidden } from "@chakra-ui/react"
+import { Box, chakra, Container, Stack, Text, useColorModeValue, VisuallyHidden } from "@chakra-ui/react"
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa"
-import { ReactNode, useEffect, useState } from "react"
+import { ReactNode } from "react"
 import Image from "next/image"
 
 const SocialButton = ({ children, label, href }: { children: ReactNode; label: string; href: string }) => {
@@ -28,11 +28,6 @@ const SocialButton = ({ children, label, href }: { children: ReactNode; label: s
     )
 }
 export default function SmallWithLogoLeft() {
-    const [count, setCount] = useState(0)
-
-    useEffect(() => {
-        setCount((prevCount) => prevCount + 1)
-    }, [])
     return (
         <Box bg={useColorModeValue("gray.50", "gray.900")} color={useColorModeValue("gray.700", "gray.200")}>
             <Container
@@ -44,13 +39,10 @@ export default function SmallWithLogoLeft() {
                 justify={{ base: "center", md: "space-between" }}
                 align={{ base: "center", md: "center" }}>
                 <Image src={"/icons/DiegoLogo.svg"} width={100} height={100} alt={"DiegoLogo"} />
-                <Flex flexDir={"column"} alignItems={"center"}>
-                    <Text fontSize={20} fontWeight={500}>
-                        diegosantosmtd@gmail.com
-                    </Text>
+                <Text fontSize={20} fontWeight={500}>
+                    diegosantosmtd@gmail.com
+                </Text>
 
-                    <Text fontSize={12}>Views: {count}</Text>
-                </Flex>
                 <Stack direction={"row"} spacing={6}>
                     <SocialButton
                         label={"LinkedIn"}
