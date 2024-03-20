@@ -13,7 +13,7 @@ export default function SpinnerLoader() {
 
     return (
         <>
-            <Flex>{showImg && <Image src="/icons/loading.gif" alt="loading" width={200} height={200} />}</Flex>
+            <Flex>{showImg && <Image src="/icons/loading.gif" alt="loading" width={50} height={50} />}</Flex>
         </>
     )
 }
