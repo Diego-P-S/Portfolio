@@ -75,11 +75,7 @@ const TestimonialText = (props: Props) => {
     const { children } = props
 
     return (
-        <Text
-            textAlign={"center"}
-            fontFamily="MontSerrat"
-            color={useColorModeValue("gray.600", "gray.400")}
-            fontSize={16}>
+        <Text textAlign={"center"} color={useColorModeValue("gray.600", "gray.400")} fontSize={16}>
             {children}
         </Text>
     )
