@@ -43,7 +43,7 @@ const Header = ({ onOpen }: Props) => {
                         <Button
                             as={"a"}
                             height="30px"
-                            marginRight={5}
+                            marginRight={"10px"}
                             variant="unstyled"
                             onClick={() => {
                                 window.open(
