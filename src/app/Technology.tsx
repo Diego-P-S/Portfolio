@@ -26,7 +26,7 @@ const Technology = () => {
             </Text>
 
             <Flex flexDir={"column"}>
-                <Text textAlign="initial" as="a" fontSize={{ base: 12, md: 16, lg: 24 }} marginBottom={10}>
+                <Text textAlign="initial" as="a" fontSize={{ base: 12, md: 14, lg: 20 }} marginBottom={10}>
                     Below, I've outlined some of the cutting-edge technologies I'm proficient in as a front-end
                     developer.
                 </Text>

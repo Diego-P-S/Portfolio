@@ -1,4 +1,4 @@
-import { Button, Flex, IconButton } from "@chakra-ui/react"
+import { Button, Flex, IconButton, Text } from "@chakra-ui/react"
 import Image from "next/image"
 import { FaLinkedinIn, FaGithub } from "react-icons/fa"
 
@@ -17,7 +17,7 @@ const Header = ({ onOpen }: Props) => {
                 padding="30px"
                 w="full"
                 justifyContent={"space-between"}>
-                <Flex>
+                <Flex marginBottom={{ base: "10px", md: "0x" }}>
                     <Flex gap={4} mt="5px" alignItems={"center"}>
                         <IconButton
                             onClick={() =>
@@ -38,26 +38,47 @@ const Header = ({ onOpen }: Props) => {
                         />
                     </Flex>
                 </Flex>
-                <Flex marginTop={{ base: "14px", lg: "0px" }} wrap="wrap">
-                    <Button
-                        _hover={{ color: "#ff6b31" }}
-                        as={"a"}
-                        height="30px"
-                        href="#Experiences"
-                        fontSize={{ base: "12px", lg: "20px" }}
-                        variant="unstyled">
-                        Experiences
-                    </Button>
-                    <Button
-                        _hover={{ color: "#ff6b31" }}
-                        height="30px"
-                        as={"a"}
-                        href="#Technologies"
-                        fontSize={{ base: "12px", lg: "20px" }}
-                        variant="unstyled"
-                        marginX={{ base: "10px", lg: "20px" }}>
-                        Technologies
-                    </Button>
+                <Flex wrap="wrap" alignItems={"center"} flexDir={{ base: "column", md: "row" }}>
+                    <Flex alignItems={"center"}>
+                        <Button
+                            as={"a"}
+                            height="30px"
+                            marginRight={5}
+                            variant="unstyled"
+                            onClick={() => {
+                                window.open(
+                                    "https://drive.google.com/file/d/1gAQVXvTiXMIaVbi-DCrrnOSAS6hVmvMa/view?usp=sharing",
+                                )
+                            }}
+                            _hover={{
+                                color: "#ff6b31",
+                                textDecoration: "underline",
+                            }}>
+                            <Text fontSize={{ base: "12px", lg: "20px" }} color="#ff6b31" _hover={{ color: "#FFF" }}>
+                                Resume
+                            </Text>
+                        </Button>
+                        <Button
+                            _hover={{ color: "#ff6b31" }}
+                            as={"a"}
+                            height="30px"
+                            href="#Experiences"
+                            fontSize={{ base: "12px", lg: "20px" }}
+                            variant="unstyled">
+                            Experiences
+                        </Button>
+
+                        <Button
+                            _hover={{ color: "#ff6b31" }}
+                            height="30px"
+                            as={"a"}
+                            href="#Technologies"
+                            fontSize={{ base: "12px", lg: "20px" }}
+                            variant="unstyled"
+                            marginX={{ base: "10px", lg: "20px" }}>
+                            Technologies
+                        </Button>
+                    </Flex>
                     <Button
                         _hover={{ color: "#ff6b31" }}
                         as={"a"}

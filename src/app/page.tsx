@@ -49,7 +49,7 @@ export default function Home() {
                     <Header onOpen={onOpen} />
 
                     <Flex
-                        marginTop={{ base: 170, lg: 0 }}
+                        marginTop={{ base: 180, lg: 0 }}
                         minH="100vh"
                         marginX="auto"
                         maxW="1500px"
@@ -100,7 +100,7 @@ export default function Home() {
                                     </Link>
                                 </Flex>
                                 <Flex>
-                                    <Text textAlign="initial" fontSize={{ base: 12, md: 16, lg: 24 }}>
+                                    <Text textAlign="initial" fontSize={{ base: 12, md: 14, lg: 20 }}>
                                         I collaborate with cross-functional teams to design and develop intuitive,
                                         responsive interfaces for web and mobile applications.
                                         <br /> My responsibilities include implementing new features, conducting

@@ -5,7 +5,7 @@ const About = () => {
     return (
         <Flex marginX="auto" maxW="1500px" padding="30px" flexDir="column">
             <Text
-                fontSize={{ base: 24, md: 32, lg: 48 }}
+                fontSize={{ base: 24, md: 32, lg: 40 }}
                 backgroundClip="text"
                 color="#ff6b31 "
                 fontWeight="bold"
@@ -13,7 +13,7 @@ const About = () => {
                 About me
             </Text>
 
-            <Text as={"a"} fontSize={{ base: 12, md: 16, lg: 24 }}>
+            <Text as={"a"} fontSize={{ base: 12, md: 14, lg: 20 }}>
                 Hello! I'm Diego, a 36-year-old Brazilian front-end developer currently residing in Perth, Australia.
                 With a year and a half of experience and a background in Analysis and Systems Development, I'm
                 constantly driven by the desire to learn and evolve.
