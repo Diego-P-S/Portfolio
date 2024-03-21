@@ -164,6 +164,22 @@ export default function WithSpeechBubbles() {
                             site="https://www.linkedin.com/in/henrique-hermes-59703a121/"
                         />
                     </Testimonial>
+                    <Testimonial>
+                        <TestimonialContent>
+                            <TestimonialText>
+                                Working with Diego has been an absolute pleasure. He is driven, keen to learn and has huge potential as a software engineer.
+                                Diego's hunger to learn and grow coupled with his bright and friendly demeanour has made him a wonderful, constructive element
+                                on our team. I have no doubt that Diego will continue on his rapid rise as a software engineer and be a great addition to any team
+                                lucky enough to have him! 
+                            </TestimonialText>
+                        </TestimonialContent>
+                        <TestimonialAvatar
+                            src={"icons/Experiences/luke.webp"}
+                            name={"Luke Gelmi"}
+                            title={"Senior Front End Developer"}
+                            site="https://www.linkedin.com/in/luke-gelmi/"
+                        />
+                    </Testimonial>
                 </Stack>
             </Container>
         </Box>
