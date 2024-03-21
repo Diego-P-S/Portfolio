@@ -15,7 +15,7 @@ const About = () => {
 
             <Text as={"a"} fontSize={{ base: 12, md: 14, lg: 20 }}>
                 Hello! I'm Diego, a 36-year-old Brazilian front-end developer currently residing in Perth, Australia.
-                With a year and a half of experience and a background in Analysis and Systems Development, I'm
+                With a year and a half of programming experience and a background in Analysis and Systems Development, I'm
                 constantly driven by the desire to learn and evolve.
                 <br />
                 <br />
