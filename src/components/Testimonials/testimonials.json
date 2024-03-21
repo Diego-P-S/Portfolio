@@ -1,0 +1,39 @@
+{
+    "testimonials": [
+        {
+            "name": "Madan Morris",
+            "photo": "icons/Experiences/Madan.jpeg",
+            "linkedin": "https://www.linkedin.com/in/madan-morris-98615624/",
+            "title": "CTO at Wevolt",
+            "message": " I've really enjoyed seeing Diego grow with us at WeVolt. From day one, he brought this amazing energy and dedication that's hard to find. What strikes me most is not just his skill in front-end development, but also how he faces every challenge with a smile and a 'let's do this' attitude. More than that, Diego is incredibly humble and just a great person to be around. He makes our team better, not just with the work he does, but with the positivity he brings every day. Anyone would be lucky to have him on their team.\n\n"
+        },
+        {
+            "name": "Janmay Patel",
+            "photo": "https://media.licdn.com/dms/image/C5603AQHVSEqs2JaSgA/profile-displayphoto-shrink_200_200/0/1651839864362?e=1716422400&v=beta&t=UeErXFom9n0oJu29GmC2IaqIkDXaCilZAWnYaTvK0eg",
+            "linkedin": "https://www.linkedin.com/in/janmayp/",
+            "title": "Fullstack at Wevolt",
+            "message": "I have had the please of working with Diego during my time at Wevolt. He possesses an exceptional ability to transform design concepts into seamless and visually stunning interfaces. With his proficiency in crafting web and mobile interfaces and delivering engaging user experiences, Diego is a valuable asset to any team."
+        },
+        {
+            "name": "Henrique Hermes",
+            "photo": "icons/Experiences/Henrique.jpg",
+            "linkedin": "https://www.linkedin.com/in/henrique-hermes-59703a121/",
+            "title": "Senior Front End Developer",
+            "message": " Diego is an outstanding junior front end developer with a strong focus on React and React Native. Throughout our year working together, his dedication, quick learning, and attention to detail stood out. Diego consistently delivered high-quality code and actively contributed to our team's success. As his mentor, I confidently recommend him for any front end development role; his professionalism and talent make him a valuable asset to any project."
+        },
+        {
+            "name": "Luke Gelmi",
+            "photo": "icons/Experiences/luke.webp",
+            "linkedin": "https://www.linkedin.com/in/luke-gelmi/",
+            "title": "Senior Front End Developer",
+            "message": " Working with Diego has been an absolute pleasure. He is driven, keen to learn and has huge potential as a software engineer. Diego's hunger to learn and grow coupled with his bright and friendly demeanour has made him a wonderful, constructive element on our team. I have no doubt that Diego will continue on his rapid rise as a software engineer and be a great addition to any team lucky enough to have him!"
+        },
+        {
+            "name": "Aswin Diyali",
+            "photo": "icons/Experiences/Aswin.jpeg",
+            "linkedin": "https://www.linkedin.com/in/aswin-diyali/",
+            "title": "UX Designer",
+            "message": " Diego is amazing. His work ethic and ability to learn and apply information quickly is invaluable. He knows how to get to the heart of complex problems and solve them. I would highly recommend him to any team that wants both a star and a team player."
+        }
+    ]
+}

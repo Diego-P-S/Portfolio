@@ -14,9 +14,9 @@ import About from "./About"
 import TalkModal from "./talkModal"
 import Container from "../components/Container"
 import Carousel from "../components/Carousel"
-import Testimonials from "../components/Testimonials"
 import { Engine } from "tsparticles-engine"
 import SpinnerLoader from "../components/Spinnerloader"
+import Testimonials from "../components/Testimonials"
 
 export default function Home() {
     const { isOpen, onOpen, onClose } = useDisclosure()
@@ -47,86 +47,80 @@ export default function Home() {
             ) : (
                 <>
                     <Header onOpen={onOpen} />
+                    <Flex flexDir="column" marginX={"20px"}>
+                        <Flex
+                            marginTop={{ base: 180, lg: 0 }}
+                            minH="100vh"
+                            marginX="auto"
+                            maxW="1500px"
+                            id="About"
+                            alignItems="center"
+                            justifyItems={"center"}
+                            flexDir={{ base: "column", lg: "row" }}>
+                            <motion.animate
+                                initial={{ opacity: 0.1 }}
+                                animate={{ opacity: 1 }}
+                                transition={{ duration: 5 }}>
+                                <Image
+                                    src="icons/Profile/MeWithBorder.jpeg"
+                                    borderRadius="full"
+                                    height={{ base: 300, lg: "full" }}
+                                    width={{ base: 300, lg: "full" }}
+                                    alt="AboutMe"
+                                />
+                            </motion.animate>
 
-                    <Flex
-                        marginTop={{ base: 180, lg: 0 }}
-                        minH="100vh"
-                        marginX="auto"
-                        maxW="1500px"
-                        id="About"
-                        alignItems="center"
-                        justifyItems={"center"}
-                        flexDir={{ base: "column", lg: "row" }}>
-                        <motion.animate
-                            initial={{ opacity: 0.1 }}
-                            animate={{ opacity: 1 }}
-                            transition={{ duration: 5 }}>
-                            <Image
-                                src="icons/Profile/MeWithBorder.jpeg"
-                                borderRadius="full"
-                                height={{ base: 300, lg: "full" }}
-                                width={{ base: 300, lg: "full" }}
-                                alt="AboutMe"
-                            />
-                        </motion.animate>
-
-                        <About />
-                    </Flex>
-
-                    <Container
-                        height={"auto"}
-                        backgroundColor="rgba(49,49,51,0.7)"
-                        opacity={0.8}
-                        borderRadius="30px"
-                        marginX="auto"
-                        maxW="1500px"
-                        id="Experiences"
-                        padding="20px">
-                        <Flex justifyItems={"center"} gap={2} flexDir={{ base: "column", xl: "row" }}>
-                            <Flex h="100%" flexDir={"column"} wrap={"wrap"} marginRight={10}>
-                                <Flex flexDir={"column"}>
-                                    <Text
-                                        backgroundClip="text"
-                                        color="#ff6b31 "
-                                        as={"a"}
-                                        fontSize={{ base: 24, md: 32, lg: 40 }}
-                                        fontWeight="bold"
-                                        marginBottom="10px">
-                                        Experience
-                                    </Text>
-
-                                    <Link href="https://www.wevolt.com.au">
-                                        <Image src="icons/wevoltgreen.svg" w="90px" h="90px" alt="wevolt" />
-                                    </Link>
-                                </Flex>
-                                <Flex>
-                                    <Text textAlign="initial" fontSize={{ base: 12, md: 14, lg: 20 }}>
-                                        I collaborate with cross-functional teams to design and develop intuitive,
-                                        responsive interfaces for web and mobile applications.
-                                        <br /> My responsibilities include implementing new features, conducting
-                                        thorough code reviews, integrating external APIs, and actively participating in
-                                        agile development sprints to ensure projects are delivered on time.
-                                        <br />
-                                        Additionally, I utilize Storybook to meticulously craft and manage a
-                                        comprehensive library of UI components, fostering consistency and efficiency
-                                        throughout the development lifecycle.
-                                    </Text>
-                                </Flex>
-                            </Flex>
-                            <Container w="100%" h="100%">
-                                <Carousel />
-                            </Container>
+                            <About />
                         </Flex>
-                    </Container>
+                        <Container
+                            height={"auto"}
+                            backgroundColor="rgba(49,49,51,0.7)"
+                            opacity={0.8}
+                            borderRadius="30px"
+                            maxW="1500px"
+                            id="Experiences"
+                            padding="20px">
+                            <Flex justifyItems={"center"} gap={2} flexDir={{ base: "column", xl: "row" }}>
+                                <Flex h="100%" flexDir={"column"} wrap={"wrap"} marginRight={10}>
+                                    <Flex flexDir={"column"}>
+                                        <Text
+                                            backgroundClip="text"
+                                            color="#ff6b31 "
+                                            as={"a"}
+                                            fontSize={{ base: 24, md: 32, lg: 40 }}
+                                            fontWeight="bold"
+                                            marginBottom="10px">
+                                            Experience
+                                        </Text>
 
+                                        <Link href="https://www.wevolt.com.au">
+                                            <Image src="icons/wevoltgreen.svg" w="90px" h="90px" alt="wevolt" />
+                                        </Link>
+                                    </Flex>
+                                    <Flex>
+                                        <Text textAlign="initial" fontSize={{ base: 12, md: 14, lg: 20 }}>
+                                            I collaborate with cross-functional teams to design and develop intuitive,
+                                            responsive interfaces for web and mobile applications.
+                                            <br /> My responsibilities include implementing new features, conducting
+                                            thorough code reviews, integrating external APIs, and actively participating
+                                            in agile development sprints to ensure projects are delivered on time.
+                                            <br />
+                                            Additionally, I utilize Storybook to meticulously craft and manage a
+                                            comprehensive library of UI components, fostering consistency and efficiency
+                                            throughout the development lifecycle.
+                                        </Text>
+                                    </Flex>
+                                </Flex>
+                                <Container w="100%" h="100%">
+                                    <Carousel />
+                                </Container>
+                            </Flex>
+                        </Container>
+                    </Flex>
                     <Technology />
-
                     <Testimonials />
-
                     <Footer />
-
                     <TalkModal isOpen={isOpen} onClose={onClose} />
-
                     <Flex opacity={0.2} zIndex={-1}>
                         <Particles
                             id="tsparticles"

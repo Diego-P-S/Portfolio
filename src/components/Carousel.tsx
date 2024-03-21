@@ -68,21 +68,21 @@ export default function Carousel() {
                     bgColor="#ff6b31"
                     color="#fff"
                     borderRadius="full"
-                    h={{ base: "35px", md: "45px" }}
+                    h={{ base: "40px", md: "45px" }}
                     w={{ base: "35px", md: "45px" }}
                     transform={"translate(0%, -50%)"}
                     zIndex={2}
                     onClick={() => slider?.slickPrev()}
-                    fontSize={"30px"}>
+                    fontSize={{ base: "25px", md: "30px" }}>
                     <BiLeftArrowAlt />
                 </IconButton>
                 {/* Right Icon */}
                 <IconButton
-                    fontSize={"30px"}
+                    fontSize={{ base: "25px", md: "30px" }}
                     aria-label="right-arrow"
                     bgColor="#ff6b31"
                     color="#fff"
-                    h={{ base: "35px", md: "45px" }}
+                    h={{ base: "40px", md: "45px" }}
                     w={{ base: "35px", md: "45px" }}
                     borderRadius="full"
                     transform={"translate(0%, -50%)"}

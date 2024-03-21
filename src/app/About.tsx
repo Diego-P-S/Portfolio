@@ -3,7 +3,7 @@ import { Flex, Text } from "@chakra-ui/react"
 
 const About = () => {
     return (
-        <Flex marginX="auto" maxW="1500px" padding="30px" flexDir="column">
+        <Flex marginX="auto" maxW="1500px" padding="20px" flexDir="column">
             <Text
                 fontSize={{ base: 24, md: 32, lg: 40 }}
                 backgroundClip="text"
@@ -15,8 +15,8 @@ const About = () => {
 
             <Text as={"a"} fontSize={{ base: 12, md: 14, lg: 20 }}>
                 Hello! I'm Diego, a 36-year-old Brazilian front-end developer currently residing in Perth, Australia.
-                With a year and a half of programming experience and a background in Analysis and Systems Development, I'm
-                constantly driven by the desire to learn and evolve.
+                With a year and a half of programming experience and a background in Analysis and Systems Development,
+                I'm constantly driven by the desire to learn and evolve.
                 <br />
                 <br />
                 My journey so far has been an exciting blend of exploration and learning. I've immersed myself in the
