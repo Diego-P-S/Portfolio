@@ -32,14 +32,14 @@ const TalkModal = ({ isOpen, onClose }: Props) => {
         } else {
             const subject = encodeURIComponent(`${name} - ${email}`)
             const body = encodeURIComponent(message.replace(/\n/g, "%0D%0A")) // Replace newline characters with %0D%0A for proper newline display in email body
-            window.open(`mailto:diegosantosmtd@gmail.com?subject=${subject}&body=${body}`, "_blank")
+            window.location.assign(`mailto:diegosantosmtd@gmail.com?subject=${subject}&body=${body}`)
             onClose()
         }
     }
 
     return (
         <Modal isOpen={isOpen} onClose={onClose}>
-            <ModalContent color="black" justifyContent="center" margin="auto">
+            <ModalContent color="black" justifyContent="center" margin="auto" padding={"20px"}>
                 <ModalHeader>
                     <Flex flexDir="column">
                         <Flex align="center">
@@ -58,12 +58,8 @@ const TalkModal = ({ isOpen, onClose }: Props) => {
                         <FormLabel marginTop="10px">E-mail</FormLabel>
                         <Input type="text" onChange={(e) => setEmail(e.target.value)} value={email} />
 
-                        <FormLabel marginTop="10px">Mensagem</FormLabel>
-                        <Textarea
-                            placeholder="Digite aqui..."
-                            value={message}
-                            onChange={(e) => setMessage(e.target.value)}
-                        />
+                        <FormLabel marginTop="10px">Message</FormLabel>
+                        <Textarea value={message} onChange={(e) => setMessage(e.target.value)} />
                     </FormControl>
                     <Flex marginTop="20px">
                         <Button borderColor="#ff6b31" mr={3} onClick={onClose}>
