@@ -9,7 +9,7 @@
         },
         {
             "name": "Janmay Patel",
-            "photo": "https://media.licdn.com/dms/image/C5603AQHVSEqs2JaSgA/profile-displayphoto-shrink_200_200/0/1651839864362?e=1716422400&v=beta&t=UeErXFom9n0oJu29GmC2IaqIkDXaCilZAWnYaTvK0eg",
+            "photo": "icons/Experiences/Janmay.jpeg",
             "linkedin": "https://www.linkedin.com/in/janmayp/",
             "title": "Fullstack at Wevolt",
             "message": "I have had the please of working with Diego during my time at Wevolt. He possesses an exceptional ability to transform design concepts into seamless and visually stunning interfaces. With his proficiency in crafting web and mobile interfaces and delivering engaging user experiences, Diego is a valuable asset to any team."
@@ -34,6 +34,21 @@
             "linkedin": "https://www.linkedin.com/in/aswin-diyali/",
             "title": "UX Designer",
             "message": "Diego is amazing. His work ethic and ability to learn and apply information quickly is invaluable. He knows how to get to the heart of complex problems and solve them. I would highly recommend him to any team that wants both a star and a team player."
+        },
+
+        {
+            "name": "Edward Beech",
+            "photo": "icons/Experiences/Ed.jpeg",
+            "linkedin": "https://www.linkedin.com/in/edward-beech-48442a74/",
+            "title": "Lead Software Developer at WeVolt",
+            "message": "It was my pleasure to work with Diego at Wevolt, where he was a junior frontend developer in my team working on our React / NextJS web app and React Native mobile app. He’s new to the game but he has an incredible capacity to learn and he brings great energy, charisma and practical life and business experience. He’s got a good eye for detail and good common sense in his application of software practices for solving problems. I hope to work with Diego again and I’d highly recommend him as a strong and growing junior for web app or mobile app development."
+        },
+        {
+            "name": "Bhaktipriya Panchal",
+            "photo": "icons/Experiences/Bhaki.jpeg",
+            "linkedin": "https://www.linkedin.com/in/bhaktipriya-panchal-61b68590/",
+            "title": "Full Stack Developer",
+            "message": "I am pleased to recommend Diego as a frontend developer who is eager to learn and grow in his skills. I have had the opportunity to work with him on a project at Wevolt and have been impressed with his enthusiasm and willingness to take on new challenges. Diego has shown a strong aptitude for React / React Native development and a genuine interest in expanding his knowledge. He is always eager to learn new technologies and techniques, and I have no doubt that he will continue to excel in his career as he continue to develop his skills. I am confident that Diego will be a valuable asset to any team looking for a motivated and dedicated frontend developer."
         }
     ]
 }
