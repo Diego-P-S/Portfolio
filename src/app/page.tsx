@@ -17,6 +17,7 @@ import Carousel from "../components/Carousel"
 import { Engine } from "tsparticles-engine"
 import SpinnerLoader from "../components/Spinnerloader"
 import Testimonials from "../components/Testimonials"
+import Projects from "../components/Projects"
 
 export default function Home() {
     const { isOpen, onOpen, onClose } = useDisclosure()
@@ -117,6 +118,7 @@ export default function Home() {
                             </Flex>
                         </Container>
                     </Flex>
+                    <Projects />
                     <Technology />
                     <Testimonials />
                     <Footer />
