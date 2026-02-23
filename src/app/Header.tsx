@@ -11,7 +11,7 @@ const Header = ({ onOpen }: Props) => {
         <Flex padding="20px" top="0" right="0" position="absolute" width="full">
             <Flex
                 flexDir={{ base: "column", lg: "row" }}
-                align="center"
+                align={{ base: "center", lg: "center" }}
                 marginX="auto"
                 maxW="1500px"
                 padding="30px"
@@ -28,7 +28,7 @@ const Header = ({ onOpen }: Props) => {
                             icon={<FaLinkedinIn />}
                             aria-label={"linkedin"}
                         />
-                        <Image src={"/icons/DiegoLogo.svg"} width={100} height={100} alt={"DiegoLogo"} />
+                        <Image src={"/icons/DiegoLogo.svg"} width={100} height={53} alt={"DiegoLogo"} style={{ width: 'auto', height: 'auto' }} />
                         <IconButton
                             onClick={() => window.open("https://github.com/Diego-P-S", "_blank")}
                             borderRadius={"full"}

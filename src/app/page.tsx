@@ -58,7 +58,7 @@ export default function Home() {
                             alignItems="center"
                             justifyItems={"center"}
                             flexDir={{ base: "column", lg: "row" }}>
-                            <motion.animate
+                            <motion.div
                                 initial={{ opacity: 0.1 }}
                                 animate={{ opacity: 1 }}
                                 transition={{ duration: 5 }}>
@@ -69,7 +69,7 @@ export default function Home() {
                                     width={{ base: 300, lg: "full" }}
                                     alt="AboutMe"
                                 />
-                            </motion.animate>
+                            </motion.div>
 
                             <About />
                         </Flex>
