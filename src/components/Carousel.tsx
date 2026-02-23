@@ -35,10 +35,14 @@ const Card = ({ image1 }: CardProps) => {
     )
 }
 
-export default function Carousel() {
+interface CarouselProps {
+    images?: string[]
+}
+
+export default function Carousel({ images }: CarouselProps) {
     const [slider, setSlider] = React.useState<Slider | null>(null)
 
-    const jobs = [
+    const defaultJobs = [
         {
             image1: "icons/Experiences/cpms.png",
         },
@@ -46,6 +50,10 @@ export default function Carousel() {
             image1: "icons/Experiences/mobiles.png",
         },
     ]
+
+    const jobs = images
+        ? images.map((img) => ({ image1: img }))
+        : defaultJobs
 
     return (
         <Box height={"100%"} width={"full"}>

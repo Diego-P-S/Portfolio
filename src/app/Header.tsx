@@ -47,7 +47,7 @@ const Header = ({ onOpen }: Props) => {
                             variant="unstyled"
                             onClick={() => {
                                 window.open(
-                                    "https://drive.google.com/file/d/18-Yi86acnP8XaruSBkur-j7aB4PpAH-h/view?usp=sharing",
+                                    "https://drive.google.com/file/d/1FlByfDIpioJo1BtzS-0R4JG2ub-NJgUR/view?usp=sharing"
                                 )
                             }}
                             _hover={{

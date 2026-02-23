@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="test-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#9C27B0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#673AB7;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect fill="url(#test-grad)" width="256" height="256" rx="25"/>
+
+  <!-- Gear/Settings icon -->
+  <circle cx="128" cy="128" r="35" fill="none" stroke="#FFFFFF" stroke-width="8"/>
+  <circle cx="128" cy="128" r="15" fill="#FFFFFF"/>
+
+  <!-- Gear teeth -->
+  <rect x="123" y="70" width="10" height="20" fill="#FFFFFF" rx="2"/>
+  <rect x="123" y="166" width="10" height="20" fill="#FFFFFF" rx="2"/>
+  <rect x="70" y="123" width="20" height="10" fill="#FFFFFF" rx="2"/>
+  <rect x="166" y="123" width="20" height="10" fill="#FFFFFF" rx="2"/>
+
+  <rect x="95" y="85" width="10" height="20" fill="#FFFFFF" rx="2" transform="rotate(45 100 95)"/>
+  <rect x="151" y="85" width="10" height="20" fill="#FFFFFF" rx="2" transform="rotate(-45 156 95)"/>
+  <rect x="95" y="151" width="10" height="20" fill="#FFFFFF" rx="2" transform="rotate(-45 100 161)"/>
+  <rect x="151" y="151" width="10" height="20" fill="#FFFFFF" rx="2" transform="rotate(45 156 161)"/>
+
+  <!-- Checkmark -->
+  <path d="M110 128 L120 138 L145 113" fill="none" stroke="#4CAF50" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

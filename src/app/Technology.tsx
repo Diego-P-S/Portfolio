@@ -28,8 +28,8 @@ const Technology = () => {
 
             <Flex flexDir={"column"}>
                 <Text textAlign="initial" as="a" fontSize={{ base: 12, md: 14, lg: 20 }} marginBottom={10}>
-                    Below, I've outlined some of the cutting-edge technologies I'm proficient in as a front-end
-                    developer.
+                    Below are the technologies and tools I'm proficient in, spanning front-end development, testing,
+                    and quality assurance.
                 </Text>
                 <Flex
                     justifyContent="space-between"
@@ -131,6 +131,25 @@ const Technology = () => {
                             objectFit="contain"
                             w="60px"
                             h="60px"
+                            src="icons/Technology/figma.svg"
+                            alt="Figma"
+                        />
+                    </Box>
+                    <Box
+                        transition="all .2s ease-in-out"
+                        cursor={"pointer"}
+                        _hover={{
+                            transform: !isLowerThan768 ? "scale(1.2)" : "",
+                        }}
+                        minW="100px"
+                        minH="100px"
+                        display="flex"
+                        justifyContent="center"
+                        alignItems="center">
+                        <Image
+                            objectFit="contain"
+                            w="60px"
+                            h="60px"
                             src="icons/Technology/typescript-icon.svg"
                             alt="TypeScript"
                         />
@@ -153,6 +172,272 @@ const Technology = () => {
                             src="icons/Technology/logo-javascript.svg"
                             alt="JavaScript"
                         />
+                    </Box>
+                    <Box
+                        transition="all .2s ease-in-out"
+                        cursor={"pointer"}
+                        _hover={{
+                            transform: !isLowerThan768 ? "scale(1.2)" : "",
+                        }}
+                        display="flex"
+                        justifyContent="center"
+                        alignItems="center"
+                        minW="100px"
+                        minH="100px">
+                        <Image
+                            objectFit="contain"
+                            w="60px"
+                            h="60px"
+                            src="icons/Technology/python.svg"
+                            alt="Python"
+                        />
+                    </Box>
+                    <Box
+                        transition="all .2s ease-in-out"
+                        cursor={"pointer"}
+                        _hover={{
+                            transform: !isLowerThan768 ? "scale(1.2)" : "",
+                        }}
+                        display="flex"
+                        justifyContent="center"
+                        alignItems="center"
+                        minW="100px"
+                        minH="100px">
+                        <Image
+                            objectFit="contain"
+                            w="60px"
+                            h="60px"
+                            src="icons/Technology/nodejs.svg"
+                            alt="Node.js"
+                        />
+                    </Box>
+                    <Box
+                        transition="all .2s ease-in-out"
+                        cursor={"pointer"}
+                        _hover={{
+                            transform: !isLowerThan768 ? "scale(1.2)" : "",
+                        }}
+                        display="flex"
+                        justifyContent="center"
+                        alignItems="center"
+                        minW="100px"
+                        minH="100px">
+                        <Image
+                            objectFit="contain"
+                            w="60px"
+                            h="60px"
+                            src="icons/Technology/cpp.svg"
+                            alt="C++"
+                        />
+                    </Box>
+                </Flex>
+
+                <Text
+                    marginTop={8}
+                    marginBottom={4}
+                    fontSize={{ base: 18, md: 24, lg: 30 }}
+                    backgroundClip="text"
+                    color="#ff6b31"
+                    fontWeight="bold">
+                    Testing & QA Tools
+                </Text>
+
+                <Flex
+                    justifyContent="space-between"
+                    overflow="hidden"
+                    gap={{ base: "2", lg: "5" }}
+                    overflowX="auto"
+                    align={"center"}
+                    paddingX={"20px"}>
+                    <Box
+                        minW="100px"
+                        minH="100px"
+                        transition="all .2s ease-in-out"
+                        cursor={"pointer"}
+                        _hover={{
+                            transform: !isLowerThan768 ? "scale(1.2)" : "",
+                        }}
+                        display="flex"
+                        flexDir="column"
+                        justifyContent="center"
+                        alignItems="center">
+                        <Image
+                            w="70px"
+                            h="70px"
+                            src="icons/Technology/github-actions.svg"
+                            alt="GitHub Actions"
+                        />
+                        <Text fontSize={{ base: 8, md: 10 }} marginTop={1} color="#ccc">
+                            GitHub Actions
+                        </Text>
+                    </Box>
+
+                    <Box
+                        transition="all .2s ease-in-out"
+                        cursor={"pointer"}
+                        _hover={{
+                            transform: !isLowerThan768 ? "scale(1.2)" : "",
+                        }}
+                        minW="100px"
+                        minH="100px"
+                        display="flex"
+                        flexDir="column"
+                        justifyContent="center"
+                        alignItems="center">
+                        <Image
+                            objectFit="contain"
+                            w="70px"
+                            h="70px"
+                            src="icons/Technology/zephyr-scale.png"
+                            alt="Zephyr Scale"
+                        />
+                        <Text fontSize={{ base: 8, md: 10 }} marginTop={1} color="#ccc">
+                            Zephyr Scale
+                        </Text>
+                    </Box>
+
+                    <Box
+                        transition="all .2s ease-in-out"
+                        cursor={"pointer"}
+                        _hover={{
+                            transform: !isLowerThan768 ? "scale(1.2)" : "",
+                        }}
+                        minW="100px"
+                        minH="100px"
+                        display="flex"
+                        flexDir="column"
+                        justifyContent="center"
+                        alignItems="center">
+                        <Image
+                            objectFit="contain"
+                            w="70px"
+                            h="70px"
+                            src="icons/Technology/qt-creator.svg"
+                            alt="Qt Creator"
+                        />
+                        <Text fontSize={{ base: 8, md: 10 }} marginTop={1} color="#ccc">
+                            Qt Creator
+                        </Text>
+                    </Box>
+
+                    <Box
+                        transition="all .2s ease-in-out"
+                        cursor={"pointer"}
+                        _hover={{
+                            transform: !isLowerThan768 ? "scale(1.2)" : "",
+                        }}
+                        minW="100px"
+                        minH="100px"
+                        display="flex"
+                        flexDir="column"
+                        justifyContent="center"
+                        alignItems="center">
+                        <Image
+                            objectFit="contain"
+                            w="70px"
+                            h="70px"
+                            src="icons/Technology/git.svg"
+                            alt="Git"
+                        />
+                        <Text fontSize={{ base: 8, md: 10 }} marginTop={1} color="#ccc">
+                            Git
+                        </Text>
+                    </Box>
+
+                    <Box
+                        transition="all .2s ease-in-out"
+                        cursor={"pointer"}
+                        _hover={{
+                            transform: !isLowerThan768 ? "scale(1.2)" : "",
+                        }}
+                        minW="100px"
+                        minH="100px"
+                        display="flex"
+                        flexDir="column"
+                        justifyContent="center"
+                        alignItems="center">
+                        <Image
+                            objectFit="contain"
+                            w="70px"
+                            h="70px"
+                            src="icons/Technology/jira.svg"
+                            alt="Jira"
+                        />
+                        <Text fontSize={{ base: 8, md: 10 }} marginTop={1} color="#ccc">
+                            Jira
+                        </Text>
+                    </Box>
+
+                    <Box
+                        transition="all .2s ease-in-out"
+                        cursor={"pointer"}
+                        _hover={{
+                            transform: !isLowerThan768 ? "scale(1.2)" : "",
+                        }}
+                        minW="100px"
+                        minH="100px"
+                        display="flex"
+                        flexDir="column"
+                        justifyContent="center"
+                        alignItems="center">
+                        <Image
+                            objectFit="contain"
+                            w="70px"
+                            h="70px"
+                            src="icons/Technology/test-automation.svg"
+                            alt="Test Automation"
+                        />
+                        <Text fontSize={{ base: 8, md: 10 }} marginTop={1} color="#ccc">
+                            Test Automation
+                        </Text>
+                    </Box>
+
+                    <Box
+                        transition="all .2s ease-in-out"
+                        cursor={"pointer"}
+                        _hover={{
+                            transform: !isLowerThan768 ? "scale(1.2)" : "",
+                        }}
+                        minW="100px"
+                        minH="100px"
+                        display="flex"
+                        flexDir="column"
+                        justifyContent="center"
+                        alignItems="center">
+                        <Image
+                            objectFit="contain"
+                            w="70px"
+                            h="70px"
+                            src="icons/Technology/hl7.svg"
+                            alt="HL7"
+                        />
+                        <Text fontSize={{ base: 8, md: 10 }} marginTop={1} color="#ccc">
+                            HL7
+                        </Text>
+                    </Box>
+
+                    <Box
+                        transition="all .2s ease-in-out"
+                        cursor={"pointer"}
+                        _hover={{
+                            transform: !isLowerThan768 ? "scale(1.2)" : "",
+                        }}
+                        minW="100px"
+                        minH="100px"
+                        display="flex"
+                        flexDir="column"
+                        justifyContent="center"
+                        alignItems="center">
+                        <Image
+                            objectFit="contain"
+                            w="70px"
+                            h="70px"
+                            src="icons/Technology/mirth-connect.svg"
+                            alt="Mirth Connect"
+                        />
+                        <Text fontSize={{ base: 8, md: 10 }} marginTop={1} color="#ccc">
+                            Mirth Connect
+                        </Text>
                     </Box>
                 </Flex>
             </Flex>

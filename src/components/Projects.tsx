@@ -1,9 +1,5 @@
-import { Box, Flex, Text, Image, Link, useColorModeValue } from "@chakra-ui/react"
-import { motion } from "framer-motion"
+import { Flex, Text, Image, Badge, Link } from "@chakra-ui/react"
 import Container from "./Container"
-import { useState } from "react"
-import { Badge, Divider, IconButton } from "@chakra-ui/react"
-import { ChevronDownIcon, ChevronUpIcon } from "@chakra-ui/icons"
 
 const projects = [
     {
@@ -22,106 +18,12 @@ const projects = [
             "E-commerce Integration",
             "Responsive Design"
         ],
-        link: "https://www.raquelsteffen.com.br",
+        link: "https://www.raquelsteffen.com.au/",
         github: "https://github.com/yourusername/raquel-steffen"
     },
     // Add more projects here as needed
 ]
 
-const ProjectCard = ({ project }: { project: typeof projects[0] }) => {
-    const [showFull, setShowFull] = useState(false)
-    const bgColor = useColorModeValue("white", "gray.800")
-    const borderColor = useColorModeValue("gray.200", "gray.700")
-    const shortDesc = project.description.length > 160 && !showFull
-        ? project.description.slice(0, 160) + "..."
-        : project.description
-
-    return (
-        <motion.div
-            whileHover={{ y: -8, scale: 1.03, boxShadow: "0 8px 32px rgba(0,0,0,0.18)" }}
-            transition={{ duration: 0.25 }}
-        >
-            <Box
-                bg={bgColor}
-                borderRadius="2xl"
-                overflow="hidden"
-                border="1px"
-                borderColor={borderColor}
-                boxShadow="2xl"
-                _hover={{ boxShadow: "dark-lg" }}
-                maxW="370px"
-                minW={{ base: "90vw", sm: "340px" }}
-                mx="auto"
-            >
-                <Box position="relative" h="220px" w="100%">
-                    <Image
-                        src={project.image}
-                        alt={project.title}
-                        w="100%"
-                        h="220px"
-                        objectFit="cover"
-                    />
-                    <Box
-                        position="absolute"
-                        bottom={0}
-                        left={0}
-                        w="100%"
-                        px={4}
-                        py={3}
-                        bgGradient="linear(to-t, rgba(0,0,0,0.7), rgba(0,0,0,0.0))"
-                    >
-                        <Text color="white" fontWeight="bold" fontSize="xl" letterSpacing="wide">
-                            {project.title}
-                        </Text>
-                    </Box>
-                </Box>
-                <Divider my={2} />
-                <Box p={5} pt={2} display="flex" flexDirection="column" alignItems="flex-start">
-                    <Text color="gray.700" fontSize="md" mb={2}>
-                        {shortDesc}
-                        {project.description.length > 160 && (
-                            <IconButton
-                                aria-label={showFull ? "Show less" : "Show more"}
-                                icon={showFull ? <ChevronUpIcon /> : <ChevronDownIcon />}
-                                size="xs"
-                                variant="ghost"
-                                ml={1}
-                                onClick={() => setShowFull((v) => !v)}
-                            />
-                        )}
-                    </Text>
-                    {showFull && project.description.length > 160 && (
-                        <Text color="gray.700" fontSize="md" mb={2}>{project.description.slice(160)}</Text>
-                    )}
-                    <Flex wrap="wrap" gap={2} mt={2}>
-                        {project.technologies.map((tech, idx) => (
-                            <Badge
-                                key={tech}
-                                colorScheme={badgeColor(idx)}
-                                px={3}
-                                py={1}
-                                borderRadius="md"
-                                fontSize="sm"
-                                fontWeight="semibold"
-                                boxShadow="sm"
-                            >
-                                {tech}
-                            </Badge>
-                        ))}
-                    </Flex>
-                </Box>
-            </Box>
-        </motion.div>
-    )
-}
-
-// Helper to assign different badge colors
-function badgeColor(idx: number) {
-    const colors = [
-        "orange", "blue", "purple", "green", "teal", "pink", "yellow", "cyan", "red", "gray"
-    ]
-    return colors[idx % colors.length]
-}
 
 const Projects = () => {
     return (
@@ -158,7 +60,18 @@ const Projects = () => {
                             flexDir={{ base: "column", xl: "row" }}
                         >
                             <Flex flexDir="column" align="center" minW="300px" maxW="400px" mb={{ base: 4, xl: 0 }}>
-                                <Image src={project.image} alt={project.title} borderRadius="lg" w="100%" h="auto" />
+                                <Link href={project.link} isExternal _hover={{ opacity: 0.8 }}>
+                                    <Image
+                                        src={project.image}
+                                        alt={project.title}
+                                        borderRadius="lg"
+                                        w="100%"
+                                        h="auto"
+                                        transition="all 0.3s ease"
+                                        _hover={{ transform: "scale(1.02)", boxShadow: "0 8px 24px rgba(255, 107, 49, 0.3)" }}
+                                        cursor="pointer"
+                                    />
+                                </Link>
                                 <Text fontWeight="bold" fontSize="2xl" mt={4}>{project.title}</Text>
                                 <Flex wrap="wrap" gap={2} mt={2}>
                                     {project.technologies.map(tech => (
