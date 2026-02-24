@@ -8,10 +8,10 @@ interface Props {
 
 const Header = ({ onOpen }: Props) => {
     return (
-        <Flex padding="20px" top="0" right="0" position="absolute" width="full">
+            <Flex padding="20px" top="0" right="0" position="absolute" width="full">
             <Flex
                 flexDir={{ base: "column", lg: "row" }}
-                align={{ base: "center", lg: "center" }}
+                align="center"
                 marginX="auto"
                 maxW="1500px"
                 padding="30px"

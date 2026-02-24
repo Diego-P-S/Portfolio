@@ -36,11 +36,13 @@
         "End-to-End Testing",
         "Documentation",
         "Bug Tracking",
-        "Jira"
+        "Jira",
+        "SonarCloud"
       ],
       "carouselImages": [
         "icons/Experiences/DelivAssure.jpg",
-        "icons/Experiences/vitaltrace-testing.svg"
+        "icons/Experiences/Ready.png",
+        "icons/Experiences/zephyr-scale-neolink.png"
       ]
     },
     {
@@ -50,7 +52,7 @@
       "website": "https://www.wevolt.com.au",
       "role": "Front-End Developer",
       "period": "2022 - 2023",
-      "description": "Collaborated with cross-functional teams to design and develop intuitive, responsive interfaces for web and mobile applications.",
+      "description": "I collaborate with cross-functional teams to design and develop intuitive, responsive interfaces for web and mobile applications. My responsibilities include implementing new features, conducting thorough code reviews, integrating external APIs, and actively participating in agile development sprints to ensure projects are delivered on time. Additionally, I utilize Storybook to meticulously craft and manage a comprehensive library of UI components, fostering consistency and efficiency throughout the development lifecycle.",
       "responsibilities": [
         "Implementing new features for web and mobile applications using React and React Native",
         "Conducting thorough code reviews to ensure code quality and best practices",
