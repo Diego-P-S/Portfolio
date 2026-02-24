@@ -38,13 +38,21 @@ const Projects = () => {
                         justifyItems={"center"}
                         gap={2}
                         flexDir={{ base: "column", xl: "row" }}>
-                        <Flex flexDir="column" wrap={"wrap"} marginRight={10}>
-                            <Link href={project.link} isExternal>
+                        <Flex h="100%" flexDir={"column"} wrap={"wrap"} marginRight={10}>
+                            <Text fontWeight="bold" fontSize={{ base: 14, md: 16, lg: 20 }} color="#ff6b31" mb={2}>
+                                {project.title}
+                            </Text>
+                            <Text textAlign="initial" fontSize={{ base: 12, md: 14, lg: 20 }}>
+                                {project.description}
+                            </Text>
+                        </Flex>
+                        <Flex flexDir="column">
+                            <Link href={project.link} isExternal display="block">
                                 <Image
                                     src={project.image}
                                     alt={project.title}
                                     borderRadius="lg"
-                                    w={{ base: "100%", xl: "400px" }}
+                                    w="full"
                                     h="auto"
                                     transition="all 0.3s ease"
                                     _hover={{
@@ -54,14 +62,6 @@ const Projects = () => {
                                     cursor="pointer"
                                 />
                             </Link>
-                            <Text fontWeight="bold" fontSize={{ base: 14, md: 16, lg: 20 }} color="#ff6b31" mt={3}>
-                                {project.title}
-                            </Text>
-                        </Flex>
-                        <Flex flexDir="column" justify="center">
-                            <Text textAlign="initial" fontSize={{ base: 12, md: 14, lg: 20 }}>
-                                {project.description}
-                            </Text>
                         </Flex>
                     </Flex>
                 ))}

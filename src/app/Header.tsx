@@ -8,16 +8,16 @@ interface Props {
 
 const Header = ({ onOpen }: Props) => {
     return (
-            <Flex padding="20px" top="0" right="0" position="absolute" width="full">
+        <Flex padding="20px" top="0" right="0" left="0" position="absolute" width="full">
             <Flex
                 flexDir={{ base: "column", lg: "row" }}
                 align="center"
                 marginX="auto"
                 maxW="1500px"
-                padding="30px"
+                padding="20px"
                 w="full"
                 justifyContent={"space-between"}>
-                <Flex marginBottom={{ base: "10px", md: "0x" }}>
+                <Flex marginBottom={{ base: "10px", md: "0px" }}>
                     <Flex gap={4} mt="5px" alignItems={"center"}>
                         <IconButton
                             onClick={() =>
@@ -28,7 +28,7 @@ const Header = ({ onOpen }: Props) => {
                             icon={<FaLinkedinIn />}
                             aria-label={"linkedin"}
                         />
-                        <Image src={"/icons/DiegoLogo.svg"} width={100} height={53} alt={"DiegoLogo"} style={{ width: 'auto', height: 'auto' }} />
+                        <Image src={"/icons/DiegoLogo.svg"} width={100} height={53} alt={"DiegoLogo"} style={{ width: '100px', height: 'auto' }} />
                         <IconButton
                             onClick={() => window.open("https://github.com/Diego-P-S", "_blank")}
                             borderRadius={"full"}
