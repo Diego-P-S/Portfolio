@@ -8,7 +8,7 @@ interface Props {
 
 const Header = ({ onOpen }: Props) => {
     return (
-        <Flex padding="20px" top="0" right="0" position="absolute" width="full">
+            <Flex padding="20px" top="0" right="0" position="absolute" width="full">
             <Flex
                 flexDir={{ base: "column", lg: "row" }}
                 align="center"
@@ -28,7 +28,7 @@ const Header = ({ onOpen }: Props) => {
                             icon={<FaLinkedinIn />}
                             aria-label={"linkedin"}
                         />
-                        <Image src={"/icons/DiegoLogo.svg"} width={100} height={100} alt={"DiegoLogo"} />
+                        <Image src={"/icons/DiegoLogo.svg"} width={100} height={53} alt={"DiegoLogo"} style={{ width: 'auto', height: 'auto' }} />
                         <IconButton
                             onClick={() => window.open("https://github.com/Diego-P-S", "_blank")}
                             borderRadius={"full"}
@@ -47,7 +47,7 @@ const Header = ({ onOpen }: Props) => {
                             variant="unstyled"
                             onClick={() => {
                                 window.open(
-                                    "https://drive.google.com/file/d/18-Yi86acnP8XaruSBkur-j7aB4PpAH-h/view?usp=sharing",
+                                    "https://drive.google.com/file/d/1FlByfDIpioJo1BtzS-0R4JG2ub-NJgUR/view?usp=sharing"
                                 )
                             }}
                             _hover={{

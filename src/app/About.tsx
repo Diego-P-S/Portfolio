@@ -14,20 +14,25 @@ const About = () => {
             </Text>
 
             <Text as={"a"} fontSize={{ base: 12, md: 14, lg: 20 }}>
-                Hello! I'm Diego, a 36-year-old Brazilian front-end developer currently residing in Perth, Australia.
-                With a year and a half of programming experience and a background in Analysis and Systems Development,
-                I'm constantly driven by the desire to learn and evolve.
+                Hello! I'm Diego, a 38-year-old Brazilian developer and quality assurance professional currently
+                residing in Perth, Australia. With a background in Analysis and Systems Development, I bring expertise
+                in front-end development, software testing, and I enjoy venturing into backend development with C++,
+                Python, and Node.js.
                 <br />
                 <br />
-                My journey so far has been an exciting blend of exploration and learning. I've immersed myself in the
-                realms of web and mobile development, particularly fascinated by the intersection of design and
-                functionality. My approach always prioritizes delivering the best user experience.
+                My journey encompasses complementary skill sets: crafting intuitive web and mobile applications,
+                ensuring software quality through comprehensive testing strategies, and exploring backend technologies.
+                As a Software Tester at Vitaltrace, I've developed expertise in test automation, CI/CD pipelines with
+                GitHub Actions, and test management using Zephyr Scale. I'm passionate about the intersection of
+                development and quality assurance, believing that great software requires both excellent code and
+                rigorous testing.
                 <br />
                 <br />
-                Additionally, I strive to develop responsive code, ensuring that the products I create are accessible
-                and functional across a wide range of devices and screen sizes. While my journey has been filled with
-                challenges and discoveries, I'm excited about the opportunities that the future holds. I'm eager to
-                collaborate on innovative projects and contribute to the ever-evolving technological landscape.
+                My approach combines technical proficiency with attention to detail and a curiosity for full-stack
+                development. Whether I'm developing responsive interfaces, creating automated test scripts, or
+                experimenting with backend solutions, I prioritize delivering exceptional user experiences and robust,
+                reliable software. I'm constantly learning and evolving, eager to collaborate on innovative projects
+                that push the boundaries of technology while maintaining the highest standards of quality.
             </Text>
         </Flex>
     )

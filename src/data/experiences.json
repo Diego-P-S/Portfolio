@@ -1,0 +1,82 @@
+{
+  "experiences": [
+    {
+      "id": 1,
+      "company": "Vitaltrace",
+      "logo": "icons/Vitaltrace.svg",
+      "website": "https://www.vitaltrace.com.au",
+      "role": "Software Tester - Medical Devices",
+      "period": "2023 - Present",
+      "description": "As the Software Tester at Vitaltrace, I am responsible for ensuring the quality and reliability of critical medical devices that monitor fetal and neonatal health. Working on life-saving products like DelivAssure (world's first continuous fetal lactate monitor with FDA Breakthrough Device status) and Neolink (neonatal sepsis monitoring system), where zero-defect tolerance is essential. These innovative devices aim to reduce unnecessary cesarean sections and detect life-threatening conditions during childbirth and early neonatal care, making testing a matter of life and death.",
+      "responsibilities": [
+        "Conducting comprehensive testing efforts for DelivAssure and Neolink medical devices, ensuring patient safety and regulatory compliance",
+        "Developing and executing rigorous test automation scripts for critical healthcare systems where failures can have life-threatening consequences",
+        "Testing and validating HL7 message interfaces and healthcare data integration using Mirth Connect to ensure seamless interoperability between medical systems",
+        "Managing complex test cases and validation cycles using Zephyr Scale for Jira, maintaining complete traceability required for medical device regulations",
+        "Implementing robust CI/CD pipelines with GitHub Actions to ensure consistent quality across all software releases",
+        "Performing meticulous manual testing for safety-critical features, edge cases, and regulatory compliance scenarios",
+        "Creating and maintaining comprehensive end-to-end test documentation aligned with medical device standards (ISO 13485, FDA regulations)",
+        "Working with Qt Creator to test sophisticated desktop applications used by healthcare professionals in critical care environments",
+        "Collaborating with designers using Figma to review UI/UX specifications and ensure accurate implementation in the final product",
+        "Collaborating with multidisciplinary teams including developers, medical professionals, and regulatory experts to identify and resolve defects",
+        "Contributing to quality assurance processes and best practices specific to medical device development"
+      ],
+      "technologies": [
+        "Medical Device Testing",
+        "Test Automation",
+        "Zephyr Scale",
+        "GitHub Actions",
+        "Qt Creator",
+        "HL7",
+        "Mirth Connect",
+        "Figma",
+        "Manual Testing",
+        "CI/CD",
+        "Regulatory Compliance",
+        "End-to-End Testing",
+        "Documentation",
+        "Bug Tracking",
+        "Jira",
+        "SonarCloud"
+      ],
+      "carouselImages": [
+        "icons/Experiences/DelivAssure.jpg",
+        "icons/Experiences/Ready.png",
+        "icons/Experiences/zephyr-scale-neolink.png"
+      ]
+    },
+    {
+      "id": 2,
+      "company": "WeVolt",
+      "logo": "icons/wevoltgreen.svg",
+      "website": "https://www.wevolt.com.au",
+      "role": "Front-End Developer",
+      "period": "2022 - 2023",
+      "description": "I collaborate with cross-functional teams to design and develop intuitive, responsive interfaces for web and mobile applications. My responsibilities include implementing new features, conducting thorough code reviews, integrating external APIs, and actively participating in agile development sprints to ensure projects are delivered on time. Additionally, I utilize Storybook to meticulously craft and manage a comprehensive library of UI components, fostering consistency and efficiency throughout the development lifecycle.",
+      "responsibilities": [
+        "Implementing new features for web and mobile applications using React and React Native",
+        "Conducting thorough code reviews to ensure code quality and best practices",
+        "Integrating external APIs and third-party services",
+        "Participating in agile development sprints to ensure projects are delivered on time",
+        "Utilizing Storybook to craft and manage a comprehensive library of UI components",
+        "Collaborating with designers using Figma to transform design mockups into responsive, pixel-perfect user interfaces",
+        "Fostering consistency and efficiency throughout the development lifecycle"
+      ],
+      "technologies": [
+        "React",
+        "React Native",
+        "TypeScript",
+        "Storybook",
+        "Next.js",
+        "Expo",
+        "Figma",
+        "API Integration",
+        "Agile"
+      ],
+      "carouselImages": [
+        "icons/Experiences/cpms.png",
+        "icons/Experiences/mobiles.png"
+      ]
+    }
+  ]
+}

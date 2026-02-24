@@ -17,6 +17,8 @@ import Carousel from "../components/Carousel"
 import { Engine } from "tsparticles-engine"
 import SpinnerLoader from "../components/Spinnerloader"
 import Testimonials from "../components/Testimonials"
+import Projects from "../components/Projects"
+import experiencesData from "../data/experiences.json"
 
 export default function Home() {
     const { isOpen, onOpen, onClose } = useDisclosure()
@@ -57,7 +59,7 @@ export default function Home() {
                             alignItems="center"
                             justifyItems={"center"}
                             flexDir={{ base: "column", lg: "row" }}>
-                            <motion.animate
+                            <motion.div
                                 initial={{ opacity: 0.1 }}
                                 animate={{ opacity: 1 }}
                                 transition={{ duration: 5 }}>
@@ -68,7 +70,7 @@ export default function Home() {
                                     width={{ base: 300, lg: "full" }}
                                     alt="AboutMe"
                                 />
-                            </motion.animate>
+                            </motion.div>
 
                             <About />
                         </Flex>
@@ -80,42 +82,59 @@ export default function Home() {
                             maxW="1500px"
                             id="Experiences"
                             padding="20px">
-                            <Flex justifyItems={"center"} gap={2} flexDir={{ base: "column", xl: "row" }}>
-                                <Flex h="100%" flexDir={"column"} wrap={"wrap"} marginRight={10}>
-                                    <Flex flexDir={"column"}>
-                                        <Text
-                                            backgroundClip="text"
-                                            color="#ff6b31 "
-                                            as={"a"}
-                                            fontSize={{ base: 24, md: 32, lg: 40 }}
-                                            fontWeight="bold"
-                                            marginBottom="10px">
-                                            Experience
-                                        </Text>
-
-                                        <Link href="https://www.wevolt.com.au">
-                                            <Image src="icons/wevoltgreen.svg" w="90px" h="90px" alt="wevolt" />
-                                        </Link>
+                            <Flex flexDir="column">
+                            <Text
+                                backgroundClip="text"
+                                color="#ff6b31"
+                                as={"a"}
+                                fontSize={{ base: 24, md: 32, lg: 40 }}
+                                fontWeight="bold"
+                                marginBottom="20px">
+                                Experience
+                            </Text>
+                            <Flex flexDir="column" gap={10}>
+                                {experiencesData.experiences.map((experience) => (
+                                    <Flex key={experience.id} justifyItems={"center"} gap={2} flexDir={{ base: "column", xl: "row" }}>
+                                        <Flex h="100%" flexDir={"column"} wrap={"wrap"} marginRight={10}>
+                                            <Flex flexDir={"column"} mb={2}>
+                                                <Link href={experience.website} isExternal>
+                                                    <Image
+                                                        src={experience.logo}
+                                                        w="90px"
+                                                        h="auto"
+                                                        objectFit="contain"
+                                                        alt={experience.company}
+                                                    />
+                                                </Link>
+                                                <Text
+                                                    fontSize={{ base: 14, md: 16, lg: 20 }}
+                                                    fontWeight="bold"
+                                                    color="#ff6b31"
+                                                    mt={2}>
+                                                    {experience.role}
+                                                </Text>
+                                                <Text
+                                                    fontSize={{ base: 11, md: 13, lg: 15 }}
+                                                    color="rgba(255,255,255,0.5)"
+                                                    mb={3}>
+                                                    {experience.company} • {experience.period}
+                                                </Text>
+                                            </Flex>
+                                            <Flex>
+                                                <Text textAlign="initial" fontSize={{ base: 12, md: 14, lg: 20 }}>
+                                                    {experience.description}
+                                                </Text>
+                                            </Flex>
+                                        </Flex>
+                                        <Container w="100%" h="100%">
+                                            <Carousel images={experience.carouselImages} />
+                                        </Container>
                                     </Flex>
-                                    <Flex>
-                                        <Text textAlign="initial" fontSize={{ base: 12, md: 14, lg: 20 }}>
-                                            I collaborate with cross-functional teams to design and develop intuitive,
-                                            responsive interfaces for web and mobile applications.
-                                            <br /> My responsibilities include implementing new features, conducting
-                                            thorough code reviews, integrating external APIs, and actively participating
-                                            in agile development sprints to ensure projects are delivered on time.
-                                            <br />
-                                            Additionally, I utilize Storybook to meticulously craft and manage a
-                                            comprehensive library of UI components, fostering consistency and efficiency
-                                            throughout the development lifecycle.
-                                        </Text>
-                                    </Flex>
-                                </Flex>
-                                <Container w="100%" h="100%">
-                                    <Carousel />
-                                </Container>
+                                ))}
+                            </Flex>
                             </Flex>
                         </Container>
+                        <Projects />
                     </Flex>
                     <Technology />
                     <Testimonials />
